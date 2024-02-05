@@ -11,8 +11,7 @@ import { TaskComponent } from '../task/task.component';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  public todos$: ToDoTask[] = [{id:"efw",title:"wefefefefefefefefefe",description:"wefefefefefefefefefewefefefefefefefefefewefefefefefefefefefe",completed:false}];
-
+  public todos$: ToDoTask[] = [];
   idTask: string | null = null;
   receiveTask(updateTask: ToDoTask) {
     const existTodoIndex = this.todos$.findIndex((task: ToDoTask) => task.id === updateTask.id);
