@@ -1,0 +1,9 @@
+<main >
+
+        <forms (taskAdded)="receiveTask($event)" ></forms>
+        <list-task 
+        [tasks]="todos$"
+        (completedTask)="onHandleCompleted($event)"
+        (deletTask)="onHandleDelet($event)"
+        ></list-task>
+</main> 	

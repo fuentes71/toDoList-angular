@@ -1,0 +1,52 @@
+section{
+    flex-direction: column;
+}
+.card{
+    gap: 40px;
+    width: 50%;
+    justify-content: space-around;
+}
+
+
+.task{
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+
+    h2{
+        font-size: 2.6rem;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 2px solid var(--color-dark) ;
+    }
+
+    p{
+        font-size: 1rem;
+        padding-left: 20px;
+        width: 80%;
+        -ms-word-break: break-all;
+        word-break: break-all;
+    }
+
+    button{
+        width: 100%;
+        border-radius: 2px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all .8s;
+    }
+
+   
+}   
+
+.container-btn{
+    gap: 10px;
+    flex-direction: column;
+
+    .btn{
+        width: 100%;
+    }
+}
+.line{
+    text-decoration: line-through;
+}

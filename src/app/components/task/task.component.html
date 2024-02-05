@@ -1,0 +1,25 @@
+<section  class="display-flex">
+    <div *ngFor="let task of tasks"class="display-flex card card--inverted " [ngClass]="{'card--accent':task.completed}">
+    <div class=" display-flex  task">
+        <h2 [ngClass]="{'line':task.completed}">{{task.title}}</h2>
+        <p [ngClass]="{'line':task.completed}">
+            @if(!!task.description){
+                {{task.description}}
+            }@else{
+                **Sem Descrição...
+            }
+        </p>
+        <button (click)="onChangeCompleted(task.id)" class="btn">
+            @if(task.completed){
+                Concluido
+            }@else{
+                Concluir
+            }
+        </button>
+    </div>
+    <div class="display-flex container-btn" >
+        <button (click)="onChangeEdit(task)" class="btn">Editar</button>
+        <button (click)="onChangeDelet(task.id)" class="btn">Excluir</button>
+    </div></div>
+</section>
+

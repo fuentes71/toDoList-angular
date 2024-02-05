@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://rsms.me/inter/inter.css');
+
+:root{
+    --color-light: whitesmoke;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+    --color-completed: #00bbfa;
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+    
+    line-height: 1.4;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    font-weight: 300;
+
+    
+}
+*{
+    
+    margin: 0;
+    padding: 0; 
+}
+body{
+    width: 100vw;
+    height: 100dvh;
+  overflow-x: hidden;
+    background-color: #4f4f4f;
+}
+.display-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.btn {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .card {
+    background: var(--color-background);
+    padding: calc(4 * var(--size-bezel));
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    
+    &--inverted {
+      --color-background: var(--color-dark);
+      color: var(--color-light);
+      --color-shadow: var(--color-accent);
+    }
+    
+    &--accent {
+        --color-background: var(--color-dark);
+        --color-shadow: var(--color-completed);
+        color: var(--color-light);
+        .btn{
+            background-color: var(--color-completed);
+        }
+    }
+    
+    *:first-child {
+      margin-top: 0;
+    }
+  }

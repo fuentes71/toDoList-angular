@@ -1,0 +1,42 @@
+<section class="display-flex">
+  <form [formGroup]="formGroup" (ngSubmit)="(false)" class="card">
+    <div class="display-flex input-group">
+      <div>
+        <label class="input">
+          <input
+            class="input__field"
+            [maxlength]="20"
+            formControlName="title"
+            id="title"
+            type="text"
+            placeholder=" "
+          />
+          <span class="input__label">Título</span>
+        </label>
+      </div>
+      <div>
+        <label class="input">
+          <input
+            class="input__field"
+            [maxlength]="60"
+            formControlName="description"
+            id="description"
+            type="text"
+            placeholder=" "
+          />
+          <span class="input__label">Descrição</span>
+        </label>
+      </div>
+    </div>
+    <div class="container-btn">
+      <button type="button" (click)="updateTodo()" class="btn">
+        @if(editTask){ Editar Tarefa }@else { Criar Tarefa }
+      </button>
+      @if(editTask){
+      <button type="button" (click)="cancelEdit()" class="btn btn-cancel">
+        Cancelar Edição
+      </button>
+      }
+    </div>
+  </form>
+</section>
